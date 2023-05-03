@@ -33,7 +33,7 @@ jobs:
       
     - name: Install TWRP generator 
       run: |
-        pip3 install twrpdtgen
+        pip install twrpdtgen
         mkdir dt
     
     - name: Download boot or recovery img
@@ -43,7 +43,7 @@ jobs:
       
     - name: Start build
       run: |
-        python3 -m twrpdtgen -o dt/ *.img
+        python -m twrpdtgen -o dt/ *.img
 
     - name: ZIP device tree
       run: |
